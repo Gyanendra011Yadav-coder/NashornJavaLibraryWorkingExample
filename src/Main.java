@@ -20,22 +20,17 @@ import java.io.FileReader;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, ScriptException, NoSuchMethodException {
-        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-//        calling Library
-        engine.eval(new FileReader("C:/Adda52/NashornTestingProject/lib/sfs2x-api-1.7.11.js"));
-        engine.eval(new FileReader("main.js"));
 
+        SwingTester swingTester = new SwingTester();
+        swingTester.createWindow();
 
-
-
-        //
-//        String filepath="C:/Adda52/NashornTestingProject/lib/sfs2x-api-1.7.11";
-//        engine.eval("load('"+filepath+"')");
-        Invocable invocable = (Invocable) engine;
-
-        Object result = invocable.invokeFunction("function1", ", This is testing code of Nashorn...");
-        Object result2 = invocable.invokeFunction("function2");
-        System.out.println(result);
-        System.out.println(result2);
+//        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
+//        engine.eval(new FileReader("C:/Adda52/NashornTestingProject/lib/sfs2x-api-1.7.11.js"));
+//        engine.eval(new FileReader("main.js"));
+//        Invocable invocable = (Invocable) engine;
+//        Object result = invocable.invokeFunction("function1", ", This is testing code of Nashorn...");
+//        Object result2 = invocable.invokeFunction("function2");
+//        System.out.println(result);
+//        System.out.println(result2);
     }
 }
